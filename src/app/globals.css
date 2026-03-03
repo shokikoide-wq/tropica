@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply min-h-screen;
+    background: linear-gradient(
+      135deg,
+      #fff7ed 0%,
+      #fefce8 30%,
+      #f0fdfa 70%,
+      #ccfbf1 100%
+    );
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/75 backdrop-blur-md rounded-2xl border border-white/30;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  }
+
+  .tropical-button {
+    @apply text-white font-semibold py-2 px-6 rounded-full transition-all duration-200 active:scale-95;
+    background: linear-gradient(135deg, #f97316, #f43f5e);
+  }
+  .tropical-button:hover {
+    box-shadow: 0 4px 16px rgba(249, 115, 22, 0.35);
+    transform: translateY(-1px);
+  }
+
+  .ocean-button {
+    @apply text-white font-semibold py-2 px-4 rounded-full transition-all duration-200;
+    background: linear-gradient(135deg, #14b8a6, #0d9488);
+  }
+  .ocean-button:hover {
+    box-shadow: 0 4px 16px rgba(20, 184, 166, 0.35);
+  }
+}
